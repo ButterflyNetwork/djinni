@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 
 @interface DBParcelablePrimitives : NSObject
+- (nonnull instancetype)init NS_UNAVAILABLE;
++ (nonnull instancetype)new NS_UNAVAILABLE;
 - (nonnull instancetype)initWithB:(BOOL)b
                             eight:(int8_t)eight
                           sixteen:(int16_t)sixteen
@@ -21,7 +23,7 @@
                       oFthirtytwo:(nullable NSNumber *)oFthirtytwo
                       oFsixtyfour:(nullable NSNumber *)oFsixtyfour
                                oS:(nullable NSString *)oS
-                               oD:(nullable NSDate *)oD;
+                               oD:(nullable NSDate *)oD NS_DESIGNATED_INITIALIZER;
 + (nonnull instancetype)parcelablePrimitivesWithB:(BOOL)b
                                             eight:(int8_t)eight
                                           sixteen:(int16_t)sixteen
