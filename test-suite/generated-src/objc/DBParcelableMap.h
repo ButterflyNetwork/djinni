@@ -4,7 +4,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DBParcelableMap : NSObject
-- (nonnull instancetype)initWithM:(nonnull NSDictionary<NSString *, NSString *> *)m;
+- (nonnull instancetype)init NS_UNAVAILABLE;
++ (nonnull instancetype)new NS_UNAVAILABLE;
+- (nonnull instancetype)initWithM:(nonnull NSDictionary<NSString *, NSString *> *)m NS_DESIGNATED_INITIALIZER;
 + (nonnull instancetype)parcelableMapWithM:(nonnull NSDictionary<NSString *, NSString *> *)m;
 
 @property (nonatomic, readonly, nonnull) NSDictionary<NSString *, NSString *> * m;

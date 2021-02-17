@@ -4,7 +4,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DBParcelableOptionalMap : NSObject
-- (nonnull instancetype)initWithOptionalSet:(nullable NSDictionary<NSString *, NSSet<NSString *> *> *)optionalSet;
+- (nonnull instancetype)init NS_UNAVAILABLE;
++ (nonnull instancetype)new NS_UNAVAILABLE;
+- (nonnull instancetype)initWithOptionalSet:(nullable NSDictionary<NSString *, NSSet<NSString *> *> *)optionalSet NS_DESIGNATED_INITIALIZER;
 + (nonnull instancetype)parcelableOptionalMapWithOptionalSet:(nullable NSDictionary<NSString *, NSSet<NSString *> *> *)optionalSet;
 
 @property (nonatomic, readonly, nullable) NSDictionary<NSString *, NSSet<NSString *> *> * optionalSet;

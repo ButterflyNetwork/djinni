@@ -4,7 +4,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DBParcelableMapList : NSObject
-- (nonnull instancetype)initWithMapSet:(nonnull NSDictionary<NSString *, NSArray<NSString *> *> *)mapSet;
+- (nonnull instancetype)init NS_UNAVAILABLE;
++ (nonnull instancetype)new NS_UNAVAILABLE;
+- (nonnull instancetype)initWithMapSet:(nonnull NSDictionary<NSString *, NSArray<NSString *> *> *)mapSet NS_DESIGNATED_INITIALIZER;
 + (nonnull instancetype)parcelableMapListWithMapSet:(nonnull NSDictionary<NSString *, NSArray<NSString *> *> *)mapSet;
 
 @property (nonatomic, readonly, nonnull) NSDictionary<NSString *, NSArray<NSString *> *> * mapSet;
